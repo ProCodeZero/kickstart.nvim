@@ -46,16 +46,17 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd('BufEnter', {
-    group = ThePrimeagenGroup,
-    callback = function()
-        if vim.bo.filetype == "zig" then
-            pcall(vim.cmd.colorscheme, "tokyonight-night")
-        else
-            pcall(vim.cmd.colorscheme, "rose-pine-moon")
-        end
-    end
-})
+-- to change colorscheme by current file language
+-- autocmd('BufEnter', {
+--     group = ThePrimeagenGroup,
+--     callback = function()
+--         if vim.bo.filetype == "go" then
+--             pcall(vim.cmd.colorscheme, "tokyonight-night")
+--         else
+--             pcall(vim.cmd.colorscheme, "rose-pine-moon")
+--         end
+--     end
+-- })
 
 
 autocmd('LspAttach', {

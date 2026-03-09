@@ -28,4 +28,5 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+-- This is to visual limit a width of a window
+-- vim.opt.colorcolumn = "80"
